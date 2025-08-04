@@ -1,0 +1,100 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background image styling */
+.background {
+  background-image: url('Studio_Blurred_Rotated.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Centered content box */
+.content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo styling */
+.logo {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.content-box h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* About text */
+.about {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+/* Location text */
+.location {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+/* Contact email */
+.contact {
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #00acee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Social links */
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00acee;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #fff;
+}
