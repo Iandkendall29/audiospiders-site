@@ -6,41 +6,58 @@
 }
 
 body, html {
-  height: 100%;
+  min-height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
+
 
 /* Background image styling */
 .background {
   background-image: url('Studio_Blurred_Rotated.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; 
   filter: blur(8px);
-  position: absolute;
-  top: 0;
+  position: fixed; 
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
+
 /* Centered content box */
 .content-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.85);
   padding: 40px;
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
+  margin: 80px auto;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
+
+/* left box audio tracks/ our work 
+.audio-box {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+  border-top: 1px solid #444;
+
+
+}
+*/
+
 
 /* Logo styling */
 .logo {
@@ -75,7 +92,7 @@ body, html {
 }
 
 .contact a {
-  color: #00acee;
+  color: #058bce;
   text-decoration: none;
   font-weight: bold;
 }
@@ -90,11 +107,152 @@ body, html {
   display: inline-block;
   margin: 0 10px;
   text-decoration: none;
-  color: #00acee;
+  color: #058bce;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .socials a:hover {
   color: #fff;
+}
+
+/* Recording Section */
+.recording-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.recording-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #E68FFF;
+}
+
+.recording-section .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.recording-section .desc {
+  font-size: 1.05rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* mix */
+.mixing-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.mixing-section h2 {
+    font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #E68FFF;
+}
+
+.mixing-section .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.mixing-section .desc {
+  font-size: 1.05rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.audio-box {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+
+.audio-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #E68FFF;
+}
+
+.the-gear {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.the-gear h2{
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #E68FFF;
+}
+
+.the-gear.desc {
+  font-size: 1.05rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+/* Equipment Table Section */
+.equipment-section {
+  margin-top: 60px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.equipment-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #E68FFF;
+}
+
+.equipment-section .desc{
+  font-size: 1.05rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.equipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.equipment-table th,
+.equipment-table td {
+  border: 1px solid #444;
+  padding: 12px;
+  color: #ccc;
+}
+
+.equipment-table th {
+  background-color: #111;
+  color: #E68FFF;
+  font-weight: bold;
+}
+
+.equipment-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
 }
