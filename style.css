@@ -341,3 +341,23 @@ body, html {
 .contact-form button:hover {
   background-color: #007bbd;
 }
+
+.our-work-section{
+      margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  text-align: center;
+}
+
+.our-work-section h2{
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #E68FFF;
+}
+
+.our-work-section h4 {
+  font-size: 1.0;
+  margin-bottom: 20px;
+  color: #E68FFF;
+}
+
