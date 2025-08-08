@@ -170,8 +170,10 @@
 </section>
 
 </div>
-<script>
-  // firebase
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
+  import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js';
+
   const firebaseConfig = {
     apiKey: "AIzaSyDAT1GXdA_tG4HxcPjAQyCu9h4yqKP_j-Y",
     authDomain: "audio-spiders.firebaseapp.com",
@@ -180,24 +182,23 @@
     messagingSenderId: "978762449102",
     appId: "1:978762449102:web:fb44a4524930d2a739109f"
   };
-
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-
+  
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  
   // Handle form submission
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
-
+  
     if (form) {
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
-
+  
         try {
-          await db.collection("messages").add({
+          await addDoc(collection(db, "messages"), {
             name,
             email,
             message,
@@ -212,6 +213,7 @@
       });
     }
   });
+
 </script>
 </body>
 </html>
